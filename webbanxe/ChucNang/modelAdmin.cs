@@ -30,8 +30,7 @@ namespace webbanxe.model
             CloseDB();
             if (dt.Rows.Count > 0)
                 return false;
-            else// loại ép buộc người khác
-                // quý <3 người ta khum pik người ta hỏi ::(
+            else
                 return true;
         }
         public Boolean Them(xedien xe)

@@ -34,8 +34,8 @@ namespace webbanxe
                 if (reader.HasRows)
                 {
                     reader.Read();
-                    string quyenHan = reader.GetString(7);
-                    string username = reader.GetString(1);
+                    string quyenHan = reader.GetString(6);
+                    string username = reader.GetString(0);
                     
                     if (quyenHan == "user")
                     {

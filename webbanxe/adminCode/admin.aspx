@@ -153,7 +153,7 @@
                 <tr>
                     <td>Mô Tả</td>
                     <td>
-                        <asp:TextBox ID="txtMota"  runat="server"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="RequiredFieldValidator" ControlToValidate="txtMota" ForeColor="Red">*</asp:RequiredFieldValidator></td>
+                        <asp:TextBox ID="txtMota"  runat="server" TextMode="MultiLine"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="RequiredFieldValidator" ControlToValidate="txtMota" ForeColor="Red">*</asp:RequiredFieldValidator></td>
                 </tr>
                 <tr>
                     <td >Hình Ảnh</td>
@@ -169,7 +169,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>Chức Năng</td>
+                    <td></td>
                     <td>
                         <asp:Button ID="btnAdd" CssClass="btn btn-success" runat="server" Text="Thêm Sản Phẩm" OnClick="btnAdd_Click" />
                             <asp:Button ID="Button1" runat="server" class="btn btn-success ms-5" Text="Reset" CausesValidation="False" OnClick="Button1_Click" />

@@ -86,6 +86,8 @@
     <Content Include="userCode\Cart.aspx" />
     <Content Include="userCode\chitietsanpham.aspx" />
     <Content Include="userCode\main.css" />
+    <Content Include="userCode\Oder.aspx" />
+    <Content Include="userCode\OrderHistory.aspx" />
     <Content Include="userCode\user.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -100,8 +102,10 @@
       <DependentUpon>admin.aspx</DependentUpon>
     </Compile>
     <Compile Include="ChucNang\cookies.cs" />
+    <Compile Include="ChucNang\DatHang.cs" />
     <Compile Include="ChucNang\modelUser.cs" />
     <Compile Include="ChucNang\connect.cs" />
+    <Compile Include="ChucNang\UserModel.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -141,6 +145,20 @@
     </Compile>
     <Compile Include="userCode\chitietsanpham.aspx.designer.cs">
       <DependentUpon>chitietsanpham.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="userCode\Oder.aspx.cs">
+      <DependentUpon>Oder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="userCode\Oder.aspx.designer.cs">
+      <DependentUpon>Oder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="userCode\OrderHistory.aspx.cs">
+      <DependentUpon>OrderHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="userCode\OrderHistory.aspx.designer.cs">
+      <DependentUpon>OrderHistory.aspx</DependentUpon>
     </Compile>
     <Compile Include="userCode\user.aspx.cs">
       <DependentUpon>user.aspx</DependentUpon>

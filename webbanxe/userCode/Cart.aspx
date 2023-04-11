@@ -37,8 +37,8 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <%--Phần header--%> 
-            
+            <%--Phần header--%>
+
             <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #3379b7">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#" style="font-size: 25px; color: white">Nhóm Bar</a>
@@ -76,7 +76,7 @@
                 </div>
             </nav>
             <%--phần chức năng--%>
-            <div class="container">
+            <div class="container min-vh-100">
                 <asp:GridView ID="grvCart" CssClass="table table-hover" runat="server" AutoGenerateColumns="False" CellPadding="4" GridLines="None" DataKeyNames="MaXe" OnRowEditing="gvgh_RowEditing" OnRowUpdating="gvgh_RowUpdating" Style="margin: 0px auto" OnRowDeleting="grvCart_RowDeleting" OnRowCancelingEdit="grvCart_RowCancelingEdit" OnRowDataBound="grvCart_RowDataBound">
                     <AlternatingRowStyle BackColor="White" />
                     <Columns>
@@ -123,13 +123,19 @@
                 </asp:GridView>
                 <div class="container d-flex flex-row justify-content-end mt-3">
                     <div>
-                        <asp:Label ID="lbtong" CssClass="fw-bold" runat="server"></asp:Label>
+                        <asp:Label ID="lbtong" CssClass="fw-bold me-3"  runat="server"></asp:Label>
+                        <asp:Button ID="Button1" runat="server" CssClass="btn btn-primary" Text="Đặt Hàng" OnClick="Button1_Click" />
                     </div>
+                </div>
+                <div>
+                    
+                    <asp:Label ID="Label6" runat="server" Text=""></asp:Label>
                 </div>
             </div>
         </div>
+
         <%--Phần footer--%>
-        <div style="position: absolute; bottom: 0px">
+        <div>
             <footer style="background-color: #3379b7">
                 <div class="container">
                     <div class="row">

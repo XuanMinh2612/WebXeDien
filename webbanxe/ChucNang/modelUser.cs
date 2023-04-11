@@ -12,6 +12,29 @@ namespace webbanxe.ChucNang
     public class modelUser : connect
     {
         DataTable dt = new DataTable();
+
+        public DataTable getUser(string userName)
+        {
+            OpenDB();
+
+            string sql = "select *from taikhoan where userName ='" + userName + "'";
+            SqlDataAdapter da = new SqlDataAdapter(sql, conn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            CloseDB();
+            return dt;
+        }
+        public DataTable GetHoaDon(string userName)
+        {
+            OpenDB();
+
+            string sql = "select HoaDon.SoHD ,HoaDon.TenKH, HoaDon.DiaChi ,HoaDon.NgayDH,HoaDon.GhiChu from HoaDon,TaiKhoan where TaiKhoan.UserName = HoaDon.MaKH and TaiKhoan.UserName = '" + userName + "'";
+            SqlDataAdapter da = new SqlDataAdapter(sql, conn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            CloseDB();
+            return dt;
+        }
         public DataTable trave()
         {
             OpenDB();
@@ -48,7 +71,15 @@ namespace webbanxe.ChucNang
         public int demsp()
         {
             DataTable dt = (DataTable)HttpContext.Current.Session["Cart"];
-            return dt.Rows.Count;
+            if (dt != null)
+            {
+                return dt.Rows.Count;
+
+            }
+            else
+            {
+                return 0;
+            }
         }
         public Boolean KTMH(String masp)
         {
@@ -124,10 +155,14 @@ namespace webbanxe.ChucNang
         {
             dt = (DataTable)HttpContext.Current.Session["Cart"];
             int tong = 0;
-            foreach (DataRow dr in dt.Rows)
+            if (dt != null)
             {
-                tong += int.Parse(dr["thanhtien"].ToString());
+                foreach (DataRow dr in dt.Rows)
+                {
+                    tong += int.Parse(dr["thanhtien"].ToString());
+                }
             }
+
             return tong;
         }
         public void capnhat(string ma, int soluong)
@@ -161,6 +196,9 @@ namespace webbanxe.ChucNang
             CloseDB();
             return dt;
         }
+
+        //phần đặt hàng
+
     }
 
 }

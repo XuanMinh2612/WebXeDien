@@ -15,6 +15,11 @@ namespace webbanxe
             conn = new SqlConnection(dc);
             conn.Open();
         }
+        public SqlConnection GetConnection()
+        {
+            string dc = "Data Source=XUANMINH\\SQLEXPRESS;Initial Catalog=BanXe;Integrated Security=True";
+            return new SqlConnection(dc);
+        }
         public void CloseDB()
         {
             conn.Close();

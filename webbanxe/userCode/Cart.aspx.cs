@@ -77,5 +77,10 @@ namespace webbanxe.userCode
                 ((LinkButton)e.Row.Cells[7].Controls[2]).OnClientClick = "return confirm('Are u sure??');";
             }
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("./Oder.aspx");
+        }
     }
 }
