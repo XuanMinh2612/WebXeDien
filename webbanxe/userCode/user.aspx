@@ -17,7 +17,10 @@
                 transform-origin: center;
             }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> ad794374b4dc823b25cfb67d511ede270582320b
 =======
 >>>>>>> ad794374b4dc823b25cfb67d511ede270582320b
     </style>
