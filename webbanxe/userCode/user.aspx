@@ -16,7 +16,10 @@
                 transform: scale(1.05);
                 transform-origin: center;
             }
+<<<<<<< HEAD
 
+=======
+>>>>>>> ad794374b4dc823b25cfb67d511ede270582320b
     </style>
     <link href="../Content/all.min.css" rel="stylesheet" />
     <script src="../Content/all.min.js"></script>
